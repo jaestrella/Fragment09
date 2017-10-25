@@ -7,6 +7,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
+import android.widget.Switch;
 
 
 /**
@@ -15,7 +16,6 @@ import android.widget.ArrayAdapter;
 
 public class Fragmento3 extends ListFragment {
     int tipoLista=(int) (Math.random()*3);
-
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         return inflater.inflate(R.layout.fragmento3, container, false);
@@ -26,14 +26,14 @@ public class Fragmento3 extends ListFragment {
         super.onCreate(savedInstanceState);
         //setListAdapter(new ArrayAdapter<String>(getActivity(),android.R.layout.simple_list_item_1,Contenido.pintores));
         switch(tipoLista) {
-            case0:
-            setListAdapter(new ArrayAdapter<String>(getActivity(),android.R.layout.simple_list_item_1,Contenido.pintores));
+            case 0:
+            setListAdapter(new ArrayAdapter<String>(getActivity(), android.R.layout.simple_list_item_1, Contenido.pintores));
             break;
-            case1:
-            setListAdapter(new ArrayAdapter<String>(getActivity(),android.R.layout.simple_list_item_1,Contenido.escultores));
+            case 1:
+            setListAdapter(new ArrayAdapter<String>(getActivity(), android.R.layout.simple_list_item_1, Contenido.escultores));
             break;
-            case2:
-            setListAdapter(new ArrayAdapter<String>(getActivity(),android.R.layout.simple_list_item_1,Contenido.arquitectos));
+            case 2:
+            setListAdapter(new ArrayAdapter<String>(getActivity(), android.R.layout.simple_list_item_1, Contenido.arquitectos));
             break;
         }
     }
